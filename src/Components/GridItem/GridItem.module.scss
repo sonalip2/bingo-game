@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.selected {
+  opacity: 0.5;
+  text-decoration: line-through;
+  transition: opacity 0.5s, text-decoration 0.5s;
+}
+
+.middle {
+  cursor: default;
+  > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid black;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .container {
+    height: 60px;
+    width: 60px;
+    font-size: 10px;
+  }
+}

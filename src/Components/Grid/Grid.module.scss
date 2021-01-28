@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  height: 500px;
+  width: 500px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 376px) {
+  .container {
+    height: 300px;
+    width: 300px;
+  }
+}
