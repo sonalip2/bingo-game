@@ -11,7 +11,6 @@ const gameData = [
     {desc: 'could you share this slide afterwards?'},
     {desc: 'can somebody grant presenter rights?'},
     {desc: 'can you email that to everyone?'},
-    {desc: 'CONF CALL 😷 BINGO'},
     {desc: 'sorry, i had problem loging in'},
     {desc: '(animal noises in the background)'},
     {desc: 'sorry i didn`t found the conference id'},

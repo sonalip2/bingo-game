@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import Grid from '../Grid';
-import gameData from '../../utils/gameData'; 
+import gameData from '../../utils/gameData';
+import { insertItemArr, shuffleArray } from '../../utils'; 
 import s from './GameBoard.module.scss';
 
+const shuffleGameData = insertItemArr(shuffleArray(gameData), Math.floor(gameData.length / 2), {
+  desc: 'CONF CALL 😷 BINGO'
+});
+
 const middlePoint = Math.floor(gameData.length / 2);
+
 const points = {
   0: {points: [0,1,2,3,4], isCelebrated: false},
   1: {points: [5,6,7,8,9], isCelebrated: false},
@@ -22,7 +28,7 @@ const points = {
 const checker = (arr, target) => target.every(v => arr.includes(v));
 
 const GameBoard = () => {
-  const [items, setItems] = useState(gameData)
+  const [items, setItems] = useState(shuffleGameData)
   const [bingoPoints, setBingoPoints] = useState(points);
   const [celebrate, setCelebrate] = useState(false);
 
